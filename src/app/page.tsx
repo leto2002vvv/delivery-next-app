@@ -1,4 +1,9 @@
-import { Container, Title, TopBar } from ' @/components/shared/shared-index'
+import {
+	Container,
+	Title,
+	TopBar,
+	Filters,
+} from ' @/components/shared/shared-index'
 
 export default function Home() {
 	return (
@@ -6,10 +11,17 @@ export default function Home() {
 			<Container>
 				<Title text='All pizzas' size='lg' className='font-extrabold mt-4' />
 			</Container>
+
 			<TopBar />
-			<Container>
-				<div className='flex mr-[60px]'>
-					
+
+			<Container className='mt-8'>
+				<div className='flex gap-16'>
+					<div className='w-[250px]'>
+						<Filters />
+					</div>
+					<div className="">
+						ProductList
+					</div>
 				</div>
 			</Container>
 		</>
