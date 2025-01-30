@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 
 				{/* Right Side */}
 				<div className='flex items-center gap-4'>
-					<Button variant={'outline'}>
+					<Button variant={'outline'} className='text-primary'>
 						<User size={16} />
 						Sign in
 					</Button>					

@@ -34,7 +34,7 @@ export const CheckboxFiltersGroup: React.FC<CheckboxFiltersGroupProps> = ({
 
 	const list = showAll
 		? items.filter(item =>
-				item.text.toLowerCase().includes(inputValue.toLowerCase()) // why doens't match the upper case input value?
+				item.text.toLowerCase().includes(inputValue.toLowerCase())
 		  )
 		: items.slice(0, limit)
 
