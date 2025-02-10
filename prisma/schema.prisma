@@ -13,14 +13,14 @@ model User {
   fullName String
   email    String    @unique
   password String
-  role     Role      @default(USER)
   verified DateTime?
+  role     Role      @default(USER)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  cart  Cart?
-  Order Order[]
+  cart   Cart?
+  Orders Order[]
 }
 
 model Category {
@@ -40,8 +40,20 @@ model Product {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  ingredient Ingredient[]
-  // productItems ProductItem[] deleted
+  ingredients       Ingredient[]
+  productVariations ProductVariation[]
+}
+
+model ProductVariation {
+  id        Int        @id @default(autoincrement())
+  price     Int
+  size      Int?
+  doughType DoughType?
+
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  CartItems CartItem[]
 }
 
 model Ingredient {
@@ -52,18 +64,6 @@ model Ingredient {
 
   products  Product[]
   cartItems CartItem[]
-}
-
-model ProductItem {
-  id        Int  @id @default(autoincrement())
-  price     Int
-  size      Int?
-  doughType Int?
-
-  // product   Product @relation(fields: [productId], references: [id])
-  productId Int
-
-  CartItem CartItem[]
 }
 
 model Cart {
@@ -85,15 +85,15 @@ model Cart {
 model CartItem {
   id Int @id @default(autoincrement())
 
-  productItem   ProductItem @relation(fields: [productItemId], references: [id])
-  productItemId Int
-
   cart   Cart @relation(fields: [cartId], references: [id])
   cartId Int
 
   quantity Int
 
   ingredients Ingredient[]
+
+  ProductVariation   ProductVariation @relation(fields: [productVariationId], references: [id])
+  productVariationId Int
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -120,4 +120,9 @@ enum orderStatus {
 enum Role {
   USER
   ADMIN
+}
+
+enum DoughType {
+  THIN
+  THICK
 }

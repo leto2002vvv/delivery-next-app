@@ -114,6 +114,7 @@ export const ingredients = [
 ].map((item, i) => ({ id: i + 1, ...item }))
 
 export const products = [
+	// other products
 	{
 		name: 'Omelet with Ham and Mushrooms',
 		imageUrl:
@@ -219,17 +220,14 @@ export const products = [
 ]
 
 export const pizzas = [
+	// pizzas
 	{
 		name: 'Dodo Pizza',
 		description:
 			'Dodo Pizza with fine ground beef, spicy pepperoni salami, fresh mushrooms, green bell pepper, red onions, mozzarella, and crispy bacon on fine tomato sauce, refined with fresh cherry tomatoes and garlic.',
 		price: 'from €14.90',
-		priceInt: 14.9,
 		ingredients: {},
-		pizzaConfig: {
-			doughtype: 'classic',
-			size: 'large',
-		},
+		categoryId: 1,
 	},
 	{
 		name: 'Mexican',
@@ -237,18 +235,21 @@ export const pizzas = [
 			'Tomato sauce, chicken breast fillet, jalapeños, mozzarella, red onions, green bell peppers, tomatoes, Sriracha sauce.',
 		price: 'from €14.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Pizza Cheeseburger',
 		description: 'Like a cheeseburger, but a pizza.',
 		price: 'from €15.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Grill Veggie',
 		description: 'Grilled vegetables, tomatoes, fresh red onions, mozzarella.',
 		price: 'from €14.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Half & Half Pizza',
@@ -256,6 +257,7 @@ export const pizzas = [
 			'Large Half & Half Pizza - Double the fun: Combine two of your favorite flavors in one pizza!',
 		price: 'from €18.20',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'L.O.V.E. Pizza',
@@ -263,12 +265,14 @@ export const pizzas = [
 			'We LOVE Pizza :) Heart-shaped salami pizza with spicy salami and mozzarella on fine tomato sauce.',
 		price: '€15.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Kids Pizza',
 		description: 'Tomato sauce, mozzarella.',
 		price: '€10.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Pizza Margherita',
@@ -276,12 +280,14 @@ export const pizzas = [
 			'Pizza base with tomato sauce and mozzarella. Customize your pizza with toppings of your choice.',
 		price: 'from €8.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Pizza Margherita VEGAN',
 		description: 'Vegan cheese substitute, tomato sauce.',
 		price: 'from €9.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Salami',
@@ -289,6 +295,7 @@ export const pizzas = [
 			'Salami pizza with spicy salami and extra mozzarella on fine tomato sauce.',
 		price: 'from €10.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Munich',
@@ -296,6 +303,7 @@ export const pizzas = [
 			"More Munich flavor than you've ever tried! Pizza sauce, mozzarella, fresh red onions, pepperoni salami, white sausage, bacon, fresh bell peppers, cherry tomatoes, fresh white mushrooms, ranch sauce, garlic powder.",
 		price: 'from €15.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Pizza Tomato',
@@ -303,6 +311,7 @@ export const pizzas = [
 			'Margherita pizza with extra mozzarella and fresh tomatoes on fine tomato sauce, seasoned with a flavorful Italian herb mix.',
 		price: 'from €9.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: '4 Cheeses',
@@ -310,6 +319,7 @@ export const pizzas = [
 			'Pizza dough, cheese-cream sauce, extra mozzarella, cheddar, Grana Padano, Gorgonzola.',
 		price: 'from €13.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Fiesta',
@@ -317,6 +327,7 @@ export const pizzas = [
 			'Fiesta pizza with fine chicken breast fillet, spicy pepperoni salami, mozzarella, red onions, and garlic, with fresh tomatoes, garnished with burger sauce.',
 		price: 'from €15.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Carbonara',
@@ -324,6 +335,7 @@ export const pizzas = [
 			'Pizza dough, cheese-cream sauce, mozzarella, red onions, cheddar, Grana Padano, bacon, cherry tomatoes, Italian herb mix.',
 		price: 'from €13.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Pepperoni Fresh',
@@ -331,12 +343,14 @@ export const pizzas = [
 			'Extra mozzarella, pepperoni salami, bell peppers, tomato sauce.',
 		price: 'from €12.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Double Pepperoni',
 		description: 'Pepperoni salami.',
 		price: 'from €14.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Super Meat',
@@ -344,6 +358,7 @@ export const pizzas = [
 			'Pizza dough, tomato sauce, chicken breast fillet, ground beef, mozzarella, salami, pepperoni salami, bacon.',
 		price: 'from €15.50',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Chicken BBQ',
@@ -351,6 +366,7 @@ export const pizzas = [
 			'Chicken BBQ pizza with extra chicken breast fillet, crispy bacon, red onions, mozzarella, and tomato sauce, garnished with spicy BBQ sauce.',
 		price: 'from €13.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Chicken & Curry',
@@ -358,6 +374,7 @@ export const pizzas = [
 			'Pizza dough, tomato sauce, chicken breast fillet, mozzarella, green bell peppers, pineapple, curry sauce.',
 		price: 'from €13.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Chicken Ranch',
@@ -365,6 +382,7 @@ export const pizzas = [
 			'Chicken Ranch pizza with fine chicken breast fillet, mozzarella, and garlic on cream sauce, with fresh tomatoes, garnished with creamy ranch sauce.',
 		price: 'from €13.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Diabolo',
@@ -372,6 +390,7 @@ export const pizzas = [
 			'Diabolo pizza with spicy pepperoni salami, fiery jalapeños, and mozzarella on spicy Sriracha sauce and fine tomato sauce.',
 		price: 'from €12.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Salami Supreme',
@@ -379,6 +398,7 @@ export const pizzas = [
 			'Salami Supreme pizza with fiery pepperoni salami and extra mozzarella on fine tomato sauce.',
 		price: 'from €12.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Tonno',
@@ -386,6 +406,7 @@ export const pizzas = [
 			'Pizza dough, tomato sauce, tuna, mozzarella, red onions, corn, olives.',
 		price: 'from €11.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Veggie',
@@ -393,6 +414,7 @@ export const pizzas = [
 			'Veggie pizza with fresh tomatoes, green bell peppers, corn, red onions, and creamy mozzarella on fine tomato sauce.',
 		price: 'from €11.90',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Regina',
@@ -400,6 +422,7 @@ export const pizzas = [
 			'Pizza Regina with tender ham, fresh mushrooms, and extra mozzarella on fine tomato sauce.',
 		price: 'from 11.90€',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Hawaii',
@@ -407,6 +430,7 @@ export const pizzas = [
 			'Pizza Hawaii with cooked ham, mozzarella, and pineapple on fine tomato sauce.',
 		price: 'from 10.90€',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Funghi',
@@ -414,6 +438,7 @@ export const pizzas = [
 			'Pizza Funghi with mozzarella and fresh mushrooms on tomato sauce.',
 		price: 'from 10.90€',
 		ingredients: {},
+		categoryId: 1,
 	},
 	{
 		name: 'Prosciutto',
@@ -421,5 +446,6 @@ export const pizzas = [
 			'Pizza Prosciutto with tender ham and extra mozzarella on tomato sauce.',
 		price: 'from 10.90€',
 		ingredients: {},
+		categoryId: 1,
 	},
 ]
