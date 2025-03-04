@@ -1,9 +1,10 @@
 import { cn } from ' @/lib/utils'
 import React from 'react'
-import { Container } from ' @/components/shared/shared-index'
+import { Container, SearchInput } from ' @/components/shared/shared-index'
 import Image from 'next/image'
 import { Button } from '../ui/ui-index'
 import { ArrowRight, ShoppingCart, User } from 'lucide-react'
+import Link from 'next/link'
 
 interface HeaderProps {
 	className?: string
@@ -14,12 +15,24 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 		<header className={cn('border-b', className)}>
 			<Container className='flex items-center justify-between py-8'>
 				{/* Left Side */}
-				<div className='flex items-center gap-2'>
-					<Image src={'/pizza-logo.png'} alt={'logo'} width={32} height={32} />
-					<div>
-						<h1 className='text-2xl uppercase'>Delivery Next</h1>
-						<p className='text-sm text-gray-500 leading-3'>enjoy yourself</p>
+				<Link href='/' passHref>
+					<div className='flex items-center gap-2'>
+						<Image
+							src={'/pizza-logo.png'}
+							alt={'logo'}
+							width={32}
+							height={32}
+						/>
+						<div>
+							<h1 className='text-2xl uppercase'>Delivery Next</h1>
+							<p className='text-sm text-gray-500 leading-3'>enjoy yourself</p>
+						</div>
 					</div>
+				</Link>
+
+				{/* Middle Search */}
+				<div className='mx-10 flex-1'>
+					<SearchInput />
 				</div>
 
 				{/* Right Side */}
@@ -27,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 					<Button variant={'outline'} className='text-primary'>
 						<User size={16} />
 						Sign in
-					</Button>					
+					</Button>
 					<div>
 						<Button className='group relative'>
 							<b>500 €</b>
@@ -36,7 +49,10 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 								<ShoppingCart strokeWidth={4} />
 								<b>3</b>
 							</div>
-							<ArrowRight strokeWidth={4} className='opacity-0 absolute -translate-x-5 duration-300 right-5 group-hover:opacity-100 group-hover:translate-x-0' />
+							<ArrowRight
+								strokeWidth={4}
+								className='opacity-0 absolute -translate-x-5 duration-300 right-5 group-hover:opacity-100 group-hover:translate-x-0'
+							/>
 						</Button>
 					</div>
 				</div>

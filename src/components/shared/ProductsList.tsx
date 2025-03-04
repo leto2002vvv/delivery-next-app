@@ -4,20 +4,21 @@ import React from 'react'
 import { useIntersection } from 'react-use'
 import { ProductCard, Title } from './shared-index'
 import { useCategoryStore } from '../../../store/category'
+import { Ingredient } from '@prisma/client'
 
 interface ProductsListProps {
 	title: string
 	items: any[]
 	categoryId: number
-	className?: string
 	listClassName?: string
+	ingredients: Ingredient
 }
 
 export const ProductsList: React.FC<ProductsListProps> = ({
 	title,
 	items,
 	categoryId,
-	className,
+	ingredients,
 }) => {
 	const setActiveCategoryid = useCategoryStore(state => state.setActiveId)
 	const intersectionRef = React.useRef<HTMLDivElement>(
@@ -47,8 +48,9 @@ export const ProductsList: React.FC<ProductsListProps> = ({
 					key={product.id}
 					id={product.id}
 					name={product.name}
-					price={product.items[0].price}
-					imgUrl={product.imgUrl}
+					price={product.productVariations[0].price}
+					imgUrl={product.imageUrl}
+					ingredients={ingredients}
 				/>
 			))}
 		</div>

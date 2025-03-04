@@ -29,13 +29,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 					<Title text={name} size='sm' />
 
 					<p className='text-sm text-gray-400'>
-						Chicken, mozzarella, tomato, mushrooms, sweet pepper, onion
 					</p>
 
 					<div className='flex items-center'>
 						<p className='text-lg font-bold'>{price} €</p>
 						<Button className='ml-auto bg-orange-50 border border-secondary text-black'>
-							<Plus strokeWidth={4}/>
+							<Plus strokeWidth={4} />
 							Add to cart
 						</Button>
 					</div>

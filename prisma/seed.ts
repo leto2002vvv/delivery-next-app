@@ -110,7 +110,7 @@ async function up() {
 			}),
 			generateProductVariation({
 				productId: pizza2.id,
-				doughType: 'THICK',
+				doughType: 'THIN',
 				size: 40,
 			}),
 			generateProductVariation({
