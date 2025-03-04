@@ -9,13 +9,8 @@ import {
 	useQueryFilters,
 } from '../../../hooks/index'
 
-interface PriceProps {
-	priceFrom?: number
-	priceTo?: number
-}
-
 export const Filters: React.FC = () => {
-	const { ingredients, isLoading } = useIngredients()
+	const { ingredients } = useIngredients()
 	const filters = useFilters()
 
 	useQueryFilters(filters)

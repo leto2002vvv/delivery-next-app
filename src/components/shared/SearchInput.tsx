@@ -10,9 +10,7 @@ import { Api } from '../../../services/api-client'
 
 import { Product } from '@prisma/client'
 
-interface SearchInputProps {}
-
-export const SearchInput: React.FC<SearchInputProps> = ({}) => {
+export const SearchInput: React.FC = () => {
 	const [searchQuery, setSearchQuery] = React.useState('')
 	const [focused, setFocused] = React.useState(false)
 	const [products, setProducts] = React.useState<Product[]>([])

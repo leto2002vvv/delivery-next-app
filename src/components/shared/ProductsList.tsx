@@ -11,14 +11,14 @@ interface ProductsListProps {
 	items: any[]
 	categoryId: number
 	listClassName?: string
-	ingredients: Ingredient
+	ingredients: Ingredient[]
 }
 
 export const ProductsList: React.FC<ProductsListProps> = ({
 	title,
 	items,
 	categoryId,
-	ingredients,
+	// ingredients,
 }) => {
 	const setActiveCategoryid = useCategoryStore(state => state.setActiveId)
 	const intersectionRef = React.useRef<HTMLDivElement>(
@@ -42,7 +42,7 @@ export const ProductsList: React.FC<ProductsListProps> = ({
 		>
 			<Title text={title} size='md' className='font-extrabold w-full' />
 
-			{items.map((product, i) => (
+			{items.map(product => (
 				<ProductCard // prop imgUrl bezieht sich auf product
 					className='w-[215px] mb-5'
 					key={product.id}
@@ -50,7 +50,7 @@ export const ProductsList: React.FC<ProductsListProps> = ({
 					name={product.name}
 					price={product.productVariations[0].price}
 					imgUrl={product.imageUrl}
-					ingredients={ingredients}
+					// ingredients={ingredients}
 				/>
 			))}
 		</div>

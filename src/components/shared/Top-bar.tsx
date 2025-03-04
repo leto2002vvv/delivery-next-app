@@ -1,6 +1,5 @@
 import React from 'react'
 import { Categories, Container, SortPopup } from './shared-index'
-import { prisma } from '../../../prisma/prisma-client'
 import { Category } from '@prisma/client'
 
 interface TopBarProps {

@@ -44,7 +44,7 @@ export default async function Home() {
 										title={category.name}
 										categoryId={category.id}
 										items={category.products}
-										ingredients={category.products.map(product => product.ingredients)}
+										// ingredients={category.products.map(product => product.ingredients)}
 										key={category.id}
 									/>
 								)

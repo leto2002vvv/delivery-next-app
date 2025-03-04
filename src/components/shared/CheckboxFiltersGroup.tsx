@@ -20,7 +20,6 @@ interface CheckboxFiltersGroupProps {
 }
 
 export const CheckboxFiltersGroup: React.FC<CheckboxFiltersGroupProps> = ({
-	className,
 	defaulitems,
 	title,
 	name,

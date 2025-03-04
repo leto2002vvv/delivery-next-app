@@ -12,7 +12,6 @@ export interface FilterCheckboxProps {
 }
 
 export const FilterCheckbox: React.FC<FilterCheckboxProps> = ({
-	className,
 	text,
 	value,
 	checked,

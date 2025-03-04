@@ -8,23 +8,23 @@ import { Plus } from 'lucide-react'
 interface ProductCardProps {
 	className?: string
 	imgUrl: string
-	id: number
 	name: string
 	price: number
+	id: number
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
 	className,
 	imgUrl,
-	id,
 	name,
 	price,
+	id,
 }) => {
 	return (
 		<div className={className}>
 			<Link href='/product/1'>
 				<div className='flex flex-col gap-1'>
-					<img width={215} height={215} src={imgUrl} alt={name} />
+					<Image width={215} height={215} src={imgUrl} alt={name} />
 
 					<Title text={name} size='sm' />
 
