@@ -5,6 +5,7 @@ import {
 	Filters,
 	ProductsList,
 } from ' @/components/shared/shared-index'
+import { Suspense } from 'react'
 import { prisma } from '../../prisma/prisma-client'
 
 export default async function Home() {
@@ -22,7 +23,7 @@ export default async function Home() {
 	console.log(categories)
 
 	return (
-		<>
+		<Suspense fallback={<div>Loading...</div>}>
 			<Container>
 				<Title text='All pizzas' size='lg' className='font-extrabold mt-4' />
 			</Container>
@@ -51,6 +52,6 @@ export default async function Home() {
 					</div>
 				</div>
 			</Container>
-		</>
+		</Suspense>
 	)
 }
