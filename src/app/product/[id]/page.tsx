@@ -1,3 +1,3 @@
-export default function ProductPage({ params: { id } }) {
-	return <div>Product: {id}</div>
-}
+// export default function ProductPage({ params: { id } }) {
+// 	return <div>Product: {id}</div>
+// }
