@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Title } from './shared-index'
 import { Button } from '../ui/ui-index'
 import { Plus } from 'lucide-react'
+import { Ingredient } from '@prisma/client'
 
 interface ProductCardProps {
 	className?: string
@@ -11,6 +12,7 @@ interface ProductCardProps {
 	name: string
 	price: number
 	id: number
+	ingredients: Ingredient[]
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
@@ -18,8 +20,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 	imgUrl,
 	name,
 	price,
-	id,
+	ingredients,
 }) => {
+	const ingredientList = ingredients
+		.map(ingredient => ingredient.name)
+		.join(', ')
+
 	return (
 		<div className={className}>
 			<Link href='/product/1'>
@@ -28,8 +34,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
 					<Title text={name} size='sm' />
 
-					<p className='text-sm text-gray-400'>
-					</p>
+					<p className='text-sm text-gray-400'>{ingredientList}</p>
 
 					<div className='flex items-center'>
 						<p className='text-lg font-bold'>{price} €</p>
