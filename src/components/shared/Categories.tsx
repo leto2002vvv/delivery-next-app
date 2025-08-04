@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from ' @/lib/utils'
+import { cn } from '../../lib/utils'
 import React from 'react'
 import { useCategoryStore } from '../../../store/category'
 import { Category } from '@prisma/client'

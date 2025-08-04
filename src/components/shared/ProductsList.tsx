@@ -39,8 +39,6 @@ export const ProductsList: React.FC<ProductsListProps> = ({
 		}
 	}, [intersection?.isIntersecting, categoryId, setActiveCategoryid])
 
-	console.log(items)
-
 	return (
 		<div
 			className='flex w-full flex-wrap justify-start gap-5'

@@ -6,7 +6,15 @@ import {
 	ProductsList,
 } from ' @/components/shared/shared-index'
 import { Suspense } from 'react'
-import { prisma } from '../../prisma/prisma-client'
+import { prisma } from '../../../prisma/prisma-client'
+
+interface Data {
+	id: number
+	name?: string
+	body?: { name: string }
+	type?: string
+	lastname?: string
+}
 
 export default async function Home() {
 	const categories = await prisma.category.findMany({
@@ -19,8 +27,6 @@ export default async function Home() {
 			},
 		},
 	})
-
-	console.log(categories)
 
 	return (
 		<Suspense fallback={<div>Loading...</div>}>

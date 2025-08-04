@@ -1,6 +1,10 @@
 import { cn } from ' @/lib/utils'
 import React from 'react'
-import { Container, SearchInput } from ' @/components/shared/shared-index'
+import {
+	CartButton,
+	Container,
+	SearchInput,
+} from ' @/components/shared/shared-index'
 import Image from 'next/image'
 import { Button } from '../ui/ui-index'
 import { ArrowRight, ShoppingCart, User } from 'lucide-react'
@@ -42,18 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 						Sign in
 					</Button>
 					<div>
-						<Button className='group relative'>
-							<b>500 €</b>
-							<span className='h-full w-[1px] bg-white/30 mx-3' />
-							<div className='flex items-center gap-1 group-hover:opacity-0 transition-opacity'>
-								<ShoppingCart strokeWidth={4} />
-								<b>3</b>
-							</div>
-							<ArrowRight
-								strokeWidth={4}
-								className='opacity-0 absolute -translate-x-5 duration-300 right-5 group-hover:opacity-100 group-hover:translate-x-0'
-							/>
-						</Button>
+						<CartButton />
 					</div>
 				</div>
 			</Container>

@@ -21,6 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 	name,
 	price,
 	ingredients,
+	id,
 }) => {
 	const ingredientList = ingredients
 		.map(ingredient => ingredient.name)
@@ -28,7 +29,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
 	return (
 		<div className={className}>
-			<Link href='/product/1'>
+			<Link href={`/product/${id}`}>
 				<div className='flex flex-col gap-1'>
 					<Image width={215} height={215} src={imgUrl} alt={name} />
 

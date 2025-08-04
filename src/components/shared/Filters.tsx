@@ -26,7 +26,7 @@ export const Filters: React.FC = () => {
 		filters.setPrices('priceTo', prices[1])
 	}
 
-	console.log(filters.prices.priceFrom, filters.prices.priceTo)
+	// console.log(filters.prices.priceFrom, filters.prices.priceTo)
 
 	return (
 		<div className='flex flex-col gap-4'>
